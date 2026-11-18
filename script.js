@@ -1,4 +1,3 @@
-// 1. Classroom Number Decoder (Used on map.html)
 function decodeClassroom() {
   var input = document.getElementById("roomInput").value.trim();
   var output = document.getElementById("roomResult");
@@ -8,7 +7,6 @@ function decodeClassroom() {
     return;
   }
 
-  // Split "34-501" into ["34", "501"]
   var parts = input.split("-");
   var block = parseInt(parts[0], 10);
   var room = parseInt(parts[1], 10);
@@ -25,13 +23,11 @@ function decodeClassroom() {
     "Block: " + block + " | " + floorLabel + " | Room Number: " + room;
 }
 
-// Quick fill helper for example buttons on map.html
 function setExampleRoom(code) {
   document.getElementById("roomInput").value = code;
   decodeClassroom();
 }
 
-// 2. Checklist Counter & LocalStorage (Used on index.html & schedule.html)
 function updateChecklist(listId, countId, storageKey) {
   var list = document.getElementById(listId);
   if (!list) return;
@@ -52,7 +48,6 @@ function updateChecklist(listId, countId, storageKey) {
   document.getElementById(countId).innerHTML =
     checkedCount + " of " + boxes.length + " tasks completed";
 
-  // Save comma-separated 1s and 0s in localStorage
   localStorage.setItem(storageKey, savedStates.join(","));
 }
 
@@ -75,7 +70,6 @@ function loadChecklist(listId, countId, storageKey) {
   updateChecklist(listId, countId, storageKey);
 }
 
-// 3. Support Contact Search Filter (Used on support.html)
 function filterContacts() {
   var query = document.getElementById("contactSearch").value.toLowerCase();
   var rows = document.getElementById("contactTableBody").getElementsByTagName("tr");
@@ -90,7 +84,6 @@ function filterContacts() {
   }
 }
 
-// 4. Support Form Validation (Used on support.html)
 function submitSupportForm(event) {
   event.preventDefault();
 
