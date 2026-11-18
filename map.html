@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Map &amp; Classroom Finder - LPU First 15</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a class="logo-box" href="index.html">
+      <img src="assets/img/lpu-logo.svg" alt="LPU Logo">
+      <span>LPU First 15</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="map.html" class="active">Campus Map</a>
+      <a href="process.html">Reporting Guide</a>
+      <a href="edurev.html">EDU-Revolution</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Campus Map &amp; Classroom Finder</h1>
+      <p>Decode any LPU room code below and locate the building on the embedded campus map.</p>
+    </div>
+
+    <section>
+      <h2>Classroom Number Decoder</h2>
+      <p>Enter a room code from your UMS timetable (for example, <strong>34-501</strong>):</p>
+      <div class="form-group" style="margin-top: 10px;">
+        <label for="roomInput">Room Code (Block-Room):</label>
+        <input type="text" id="roomInput" placeholder="e.g., 34-501">
+      </div>
+      <button type="button" class="btn" onclick="decodeClassroom()">Decode Room</button>
+      <button type="button" class="btn btn-secondary" onclick="setExampleRoom('34-501')">Try 34-501</button>
+      <button type="button" class="btn btn-secondary" onclick="setExampleRoom('27-102')">Try 27-102</button>
+
+      <div id="roomResult" class="result-box">Result will appear here...</div>
+    </section>
+
+    <section>
+      <h2>Interactive LPU Campus Map</h2>
+      <p style="margin-bottom: 10px;">Use the zoom controls or search icon inside the map frame to find academic blocks, hostels, and food courts.</p>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=15eLzAj9aVMW5A8stumH4EzQ1BylHl8w&ehbc=2E312F&noprof=1"
+        title="LPU Campus Map">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>LPU First 15 - Campus Navigation</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

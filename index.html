@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LPU First 15 - Fresher's Guide</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadChecklist('packingList', 'packingCount', 'lpu_packing')">
+
+  <header>
+    <a class="logo-box" href="index.html">
+      <img src="assets/img/lpu-logo.svg" alt="LPU Logo">
+      <span>LPU First 15</span>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="map.html">Campus Map</a>
+      <a href="process.html">Reporting Guide</a>
+      <a href="edurev.html">EDU-Revolution</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Welcome to LPU Fresher's Onboarding (Class of 2026)</h1>
+      <p>Navigate your first 15 days on campus stress-free - reporting steps, day-wise induction schedule, classroom finder, and emergency contacts in one place.</p>
+      <a href="schedule.html" class="btn">View 15-Day Schedule</a>
+      <a href="map.html" class="btn btn-secondary">Open Campus Map</a>
+    </div>
+
+    <section>
+      <h2>Quick Navigation Cards</h2>
+      <div class="card-row">
+        <article class="card">
+          <h3>1. Reporting Process</h3>
+          <p>Complete document upload, hostel allotment, and Unipolis counter verification.</p>
+          <a href="process.html" class="btn">Read Steps</a>
+        </article>
+        <article class="card">
+          <h3>2. Classroom Finder</h3>
+          <p>Decode room numbers like <strong>34-501</strong> into Block, Floor, and Room.</p>
+          <a href="map.html" class="btn">Find Classroom</a>
+        </article>
+        <article class="card">
+          <h3>3. 24/7 Induction Helpline</h3>
+          <p>Need immediate help at the gate or hostel? Call <strong>01824-517170</strong>.</p>
+          <a href="support.html" class="btn">Helpdesk Directory</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pre-Arrival Packing Checklist</h2>
+      <p id="packingCount"><strong>0 of 5 tasks completed</strong></p>
+      <ul id="packingList">
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('packingList', 'packingCount', 'lpu_packing')"> Provisional Admission Letter &amp; Fee Receipt</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('packingList', 'packingCount', 'lpu_packing')"> Class 10th &amp; 12th Original Marksheets + Photocopies</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('packingList', 'packingCount', 'lpu_packing')"> Aadhaar Card &amp; 6 Passport-Size Photographs</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('packingList', 'packingCount', 'lpu_packing')"> Medical Fitness Certificate &amp; Anti-Ragging Affidavit</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('packingList', 'packingCount', 'lpu_packing')"> Laptop, Charger, Extension Board &amp; Padlock</label>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>LPU First 15 - Student Onboarding Guide | Induction Helpline: 01824-517170</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

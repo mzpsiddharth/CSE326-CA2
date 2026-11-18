@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Induction Schedule - LPU First 15</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadChecklist('adminList', 'adminCount', 'lpu_admin')">
+
+  <header>
+    <a class="logo-box" href="index.html">
+      <img src="assets/img/lpu-logo.svg" alt="LPU Logo">
+      <span>LPU First 15</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <a href="map.html">Campus Map</a>
+      <a href="process.html">Reporting Guide</a>
+      <a href="edurev.html">EDU-Revolution</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>15-Day Induction &amp; Onboarding Schedule</h1>
+      <p>Official reporting sessions for Days 1-3 followed by essential campus setup tasks for Days 4–15.</p>
+      <button type="button" class="btn" onclick="window.print()">Print Schedule</button>
+    </div>
+
+    <section>
+      <h2>Days 1 to 3: Official Induction Sessions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Activity / Session</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Reporting Day</strong></td>
+            <td>09:00 AM - 04:00 PM</td>
+            <td>Document Verification, Biometric &amp; Hostel Allotment</td>
+            <td>Unipolis Arena</td>
+          </tr>
+          <tr>
+            <td><strong>Day 1</strong></td>
+            <td>10:00 AM - 01:00 PM</td>
+            <td>Welcome Address &amp; University Leadership Briefing</td>
+            <td>Shanti Devi Mittal Auditorium</td>
+          </tr>
+          <tr>
+            <td><strong>Day 2</strong></td>
+            <td>10:30 AM - 03:30 PM</td>
+            <td>Department Orientation, UMS Portal &amp; LMS Training</td>
+            <td>Respective Academic Blocks</td>
+          </tr>
+          <tr>
+            <td><strong>Day 3</strong></td>
+            <td>11:00 AM - 04:00 PM</td>
+            <td>Campus Tour, Student Clubs &amp; Sports Registration</td>
+            <td>Block 13 &amp; Indoor Stadium</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Days 4 to 15: Post-Induction Setup Checklist</h2>
+      <p id="adminCount"><strong>0 of 4 tasks completed</strong></p>
+      <ul id="adminList">
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('adminList', 'adminCount', 'lpu_admin')"> Activate UMS Account &amp; Check Regular Timetable</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('adminList', 'adminCount', 'lpu_admin')"> Collect Physical Student ID Card &amp; Mess Pass</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('adminList', 'adminCount', 'lpu_admin')"> Activate Central Library Membership (Block 37)</label>
+        </li>
+        <li class="checklist-item">
+          <label><input type="checkbox" onchange="updateChecklist('adminList', 'adminCount', 'lpu_admin')"> Meet Assigned Faculty Mentor</label>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>LPU First 15 - Student Onboarding Guide</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

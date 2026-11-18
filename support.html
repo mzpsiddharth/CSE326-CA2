@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support &amp; Helpdesk - LPU First 15</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a class="logo-box" href="index.html">
+      <img src="assets/img/lpu-logo.svg" alt="LPU Logo">
+      <span>LPU First 15</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="map.html">Campus Map</a>
+      <a href="process.html">Reporting Guide</a>
+      <a href="edurev.html">EDU-Revolution</a>
+      <a href="support.html" class="active">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Support &amp; Emergency Helpdesk</h1>
+      <p>Search campus departments below or submit a helpdesk query directly.</p>
+    </div>
+
+    <section>
+      <h2>Campus Contact Directory</h2>
+      <div class="form-group">
+        <label for="contactSearch">Search by Department or Issue:</label>
+        <input type="text" id="contactSearch" onkeyup="filterContacts()" placeholder="Type hostel, medical, security, or UMS...">
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Phone Number</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="contactTableBody">
+          <tr>
+            <td>Freshers Induction Helpline</td>
+            <td><a href="tel:01824517170">01824-517170</a></td>
+            <td>Block 30 (Admission Cell)</td>
+          </tr>
+          <tr>
+            <td>24/7 Campus Security Control</td>
+            <td><a href="tel:01824444000">01824-444000</a></td>
+            <td>Main Gate Security Office</td>
+          </tr>
+          <tr>
+            <td>Uni-Hospital (Medical Emergency)</td>
+            <td><a href="tel:01824501227">01824-501227</a></td>
+            <td>Block 9 (24/7 Ambulance)</td>
+          </tr>
+          <tr>
+            <td>Hostel &amp; Mess Helpdesk</td>
+            <td><a href="tel:01824517000">01824-517000</a></td>
+            <td>Respective Hostel Warden Office</td>
+          </tr>
+          <tr>
+            <td>IT &amp; UMS Technical Support</td>
+            <td><a href="tel:01824517500">01824-517500</a></td>
+            <td>Block 32, Ground Floor</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Send a Query to Helpdesk</h2>
+      <form id="supportForm" onsubmit="return submitSupportForm(event)">
+        <div class="form-group">
+          <label for="studentName">Full Name *</label>
+          <input type="text" id="studentName" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="studentEmail">Email Address *</label>
+          <input type="email" id="studentEmail" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="issueCategory">Category *</label>
+          <select id="issueCategory">
+            <option value="Reporting">Reporting &amp; Documents</option>
+            <option value="Hostel">Hostel &amp; Mess</option>
+            <option value="UMS">UMS / Timetable</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="studentMsg">Describe Your Issue *</label>
+          <textarea id="studentMsg" rows="4" required placeholder="Write at least 10 characters..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label><input type="checkbox" required> I confirm the details entered above are accurate.</label>
+        </div>
+
+        <button type="submit" class="btn">Submit Query</button>
+      </form>
+      <div id="formStatus" class="result-box">Fill out the form above to generate a reference ticket.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>LPU First 15 - 24/7 Student Support</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
